@@ -24,21 +24,6 @@
 |---------|-------|--------|---------------------------------------------------------|
 | CentOS7 | 1核 4G | docker | registry.cn-hangzhou.aliyuncs.com/zhengqing/mysql:8.0   | 
 | CentOS7 | 1核 4G | docker | registry.cn-hangzhou.aliyuncs.com/zhengqing/redis:7.0.5 |
-| CentOS7 | 2核 6G | -      | GitLab Community Edition v17.7.0                        |
-| CentOS7 | 2核 4G | -      | GitLab Runner v17.7.0，已配置安装Jdk11、Maven3.9.9             |
-| CentOS7 | 6核 8G | -      | K8s v1.28.1，已配置安装Ingress V1.10.1、OpenKruise V1.6.4      |
-
-#### 系统启动效率
-
-| 模块             | 加入项目                                | 启动耗时(seconds) |
-|----------------|-------------------------------------|---------------|
-| eladmin-system | 无                                   | 9.19          |
-| eladmin-system | 分布式quartz                           | 18.637        |
-| eladmin-system | minio                               | 9.19          |
-| eladmin-system | minio、dingtalk                      | 9.262         |
-| eladmin-system | minio、dingtalk、gitlab               | 9.559         |
-| eladmin-system | minio、dingtalk、gitlab、k8s           | 56.945        |
-| eladmin-system | minio、dingtalk、gitlab、k8s、分布式quartz | 72.224        |
 
 #### 主要特性
 
@@ -85,10 +70,6 @@
 - `eladmin-logging` 为系统的日志模块，其他模块如果需要记录日志需要引入该模块
 - `eladmin-tools` 为第三方工具模块，包含：邮件、七牛云存储、本地存储、支付宝
 - `eladmin-generator` 为系统的代码生成模块，支持生成前后端CRUD代码
-- `eladmin-gitlab-boot-starter` 为系统支持Gitlab功能的模块
-- `eladmin-k8s-boot-starter` 为系统支持Kubernetes功能的模块
-- `eladmin-dingtalk-boot-starter` 为系统支持Dingtalk功能的模块
-- `eladmin-minio-boot-starter` 为系统支持Minio功能的模块
 
 #### 详细结构
 
@@ -111,53 +92,13 @@
 - eladmin-logging 系统日志模块
 - eladmin-tools 系统第三方工具模块
 - eladmin-generator 系统代码生成模块
-- eladmin-gitlab-boot-starter 支持管控Gitlab
-    - constant 常量
-    - contenxt 自动装配，连接初始化
-    - model 模型
-    - repository gitlab控制类
-- eladmin-k8s-boot-starter 支持管控Kubernetes
-    - constant 常量
-    - contenxt 自动装配，连接初始化
-    - model 模型
-    - repository k8s控制类
-    - util 工具/帮助类
-- eladmin-dingtalk-boot-starter 支持管控Kubernetes
-    - constant 常量
-    - contenxt 自动装配，连接初始化
-    - model 模型
-    - repository dingtalk控制类
-    - util 工具/帮助类
-- eladmin-minio-boot-starter 支持管控Minio
-    - constant 常量
-    - contenxt 自动装配，连接初始化
-    - model 模型
-    - repository minio控制类
 - eladmin-system 系统核心模块（系统启动入口）
     - infra 基础设施层
-        - k8s k8s相关
         - server 配置跨域与静态资源，与数据权限
         - thread 线程池相关
         - websocket WebSocket相关
     - modules 系统相关模块(登录授权、系统监控、定时任务等)
 ```
-
-#### Gitlab全自动化构建流程展示
-> 感兴趣的可以参考我的博客进行环境的搭建 https://blog.odboy.cn/%E4%BB%8E%E9%9B%B6%E6%89%93%E9%80%A0%E8%BF%90%E7%BB%B4%E5%B9%B3%E5%8F%B0/
-
-![AutoPipeline1](eladmin/doc/gitlab/AutoPipeline1.png)
-
-![AutoPipeline2](eladmin/doc/gitlab/AutoPipeline2.png)
-
-![AutoPipeline3](eladmin/doc/gitlab/AutoPipeline3.png)
-
-![AutoPipeline4](eladmin/doc/gitlab/AutoPipeline4.png)
-
-![AutoPipeline5](eladmin/doc/gitlab/AutoPipeline5.png)
-
-![AutoPipeline6](eladmin/doc/gitlab/AutoPipeline6.png)
-
-![AutoPipeline7](eladmin/doc/gitlab/AutoPipeline7.png)
 
 #### 特别鸣谢
 
