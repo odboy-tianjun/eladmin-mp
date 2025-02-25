@@ -155,38 +155,3 @@ code:
 # 密码加密传输，前端公钥加密，后端私钥解密
 rsa:
   private_key: MIIBUwIBADANBgkqhkiG9w0BAQEFAASCAT0wggE5AgEAAkEA0vfvyTdGJkdbHkB8mp0f3FE0GYP3AYPaJF7jUd1M0XxFSE2ceK3k2kw20YvQ09NJKk+OMjWQl9WitG9pB6tSCQIDAQABAkA2SimBrWC2/wvauBuYqjCFwLvYiRYqZKThUS3MZlebXJiLB+Ue/gUifAAKIg1avttUZsHBHrop4qfJCwAI0+YRAiEA+W3NK/RaXtnRqmoUUkb59zsZUBLpvZgQPfj1MhyHDz0CIQDYhsAhPJ3mgS64NbUZmGWuuNKp5coY2GIj/zYDMJp6vQIgUueLFXv/eZ1ekgz2Oi67MNCk5jeTF2BurZqNLR3MSmUCIFT3Q6uHMtsB9Eha4u7hS31tj1UWE+D+ADzp59MGnoftAiBeHT7gDMuqeJHPL4b+kC+gzV4FGTfhR9q3tTbklZkD2A==
-# gitlab
-gitlab:
-  enable: false
-  url: http://192.168.235.100:20080
-  # 所需权限：api、read_api、read_user、create_runner、manage_runner、read_repository、write_repository
-  # v14.8.2 http://192.168.235.100:20080/-/profile/personal_access_tokens
-  # v17.x http://192.168.235.100:20080/-/user_settings/personal_access_tokens
-  # 默认分支改master
-  # v17.x http://192.168.235.100:20080/admin/application_settings/repository#js-default-branch-name
-  # 系统事件回调
-  # v17.x http://192.168.235.100:20080/admin/hooks
-  # 回调Url http://192.168.1.105:8000/openApi/gitlab/webhook/callback
-  # 所需事件 Repository update events、Push events、Merge request events
-  access-token:
-# k8s
-k8s:
-  enable: false
-  debug: false
-# dingtalk
-dingtalk:
-  enable: false
-  agent-id: 3286687600
-  app-key: dingcsmyubzwqib8hk6v
-  app-secret: pT19iIMhYHQuSC9EcJ10hb42ab0F21pMlZ3rfHMOvdOtFmN3j8NB_k4Cno2HRiC4
-  robot-code: dingcsmyubzwqib8hk6v
-# minio
-minio:
-  enable: false
-  # 控制台登录端口 http://localhost:9001
-  # 文件上传&预览端口 http://localhost:9000
-  endpoint: http://localhost:9000
-  access-key: minioadmin
-  secret-key: minioadmin
-  # 分享链接过期时间，单位天
-  share-expire-time: 7

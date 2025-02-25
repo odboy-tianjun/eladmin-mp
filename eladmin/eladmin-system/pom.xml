@@ -34,27 +34,6 @@
             <artifactId>eladmin-tools</artifactId>
             <version>1.1</version>
         </dependency>
-        <!-- 自定义子模块 -->
-        <dependency>
-            <groupId>cn.odboy</groupId>
-            <artifactId>eladmin-gitlab-boot-starter</artifactId>
-            <version>1.1</version>
-        </dependency>
-        <dependency>
-            <groupId>cn.odboy</groupId>
-            <artifactId>eladmin-k8s-boot-starter</artifactId>
-            <version>1.1</version>
-        </dependency>
-        <dependency>
-            <groupId>cn.odboy</groupId>
-            <artifactId>eladmin-dingtalk-boot-starter</artifactId>
-            <version>1.1</version>
-        </dependency>
-        <dependency>
-            <groupId>cn.odboy</groupId>
-            <artifactId>eladmin-minio-boot-starter</artifactId>
-            <version>1.1</version>
-        </dependency>
         <!-- Spring boot websocket -->
         <dependency>
             <groupId>org.springframework.boot</groupId>

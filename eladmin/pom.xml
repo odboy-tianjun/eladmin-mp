@@ -15,10 +15,6 @@
         <module>eladmin-system</module>
         <module>eladmin-tools</module>
         <module>eladmin-generator</module>
-        <module>eladmin-k8s-boot-starter</module>
-        <module>eladmin-gitlab-boot-starter</module>
-        <module>eladmin-dingtalk-boot-starter</module>
-        <module>eladmin-minio-boot-starter</module>
     </modules>
     <name>ELADMIN 后台管理</name>
     <url>https://eladmin.vip</url>
