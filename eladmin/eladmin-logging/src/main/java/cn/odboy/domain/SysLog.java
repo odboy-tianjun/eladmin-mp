@@ -21,7 +21,7 @@ import com.baomidou.mybatisplus.annotation.*;
 import lombok.*;
 
 import java.io.Serializable;
-import java.sql.Timestamp;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -80,7 +80,7 @@ public class SysLog implements Serializable {
      * 创建日期
      */
     @TableField(fill = FieldFill.INSERT)
-    private Timestamp createTime;
+    private Date createTime;
 
     public SysLog(String logType, Long time) {
         this.logType = logType;
@@ -93,6 +93,6 @@ public class SysLog implements Serializable {
         private String blurry;
         private String username;
         private String logType;
-        private List<Timestamp> createTime;
+        private List<Date> createTime;
     }
 }
