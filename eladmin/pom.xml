@@ -8,8 +8,8 @@
     <packaging>pom</packaging>
     <version>1.1</version>
     <modules>
-        <module>eladmin-infra-base</module>
-        <module>eladmin-infra-exception</module>
+        <module>eladmin-base</module>
+        <module>eladmin-exception</module>
         <module>eladmin-common</module>
         <module>eladmin-logging</module>
         <module>eladmin-system</module>
