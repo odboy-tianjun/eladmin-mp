@@ -16,19 +16,19 @@
 package cn.odboy.modules.security.rest;
 
 import cn.hutool.core.util.IdUtil;
-import cn.odboy.annotation.Log;
-import cn.odboy.infra.exception.BadRequestException;
-import cn.odboy.infra.security.RsaProperties;
-import cn.odboy.infra.security.annotation.AnonymousDeleteMapping;
-import cn.odboy.infra.security.annotation.AnonymousGetMapping;
-import cn.odboy.infra.security.annotation.AnonymousPostMapping;
+import cn.odboy.system.logging.annotation.Log;
+import cn.odboy.exception.BadRequestException;
 import cn.odboy.modules.security.config.LoginProperties;
-import cn.odboy.modules.security.config.SecurityProperties;
 import cn.odboy.modules.security.contanst.LoginCodeEnum;
-import cn.odboy.modules.security.security.TokenProvider;
-import cn.odboy.modules.security.service.OnlineUserService;
-import cn.odboy.modules.security.service.dto.AuthUserDto;
-import cn.odboy.modules.security.service.dto.JwtUserDto;
+import cn.odboy.modules.security.context.TokenProvider;
+import cn.odboy.modules.security.service.OnlineUserServiceImpl;
+import cn.odboy.security.RsaProperties;
+import cn.odboy.security.annotation.AnonymousDeleteMapping;
+import cn.odboy.security.annotation.AnonymousGetMapping;
+import cn.odboy.security.annotation.AnonymousPostMapping;
+import cn.odboy.modules.security.config.SecurityProperties;
+import cn.odboy.system.security.model.AuthUserDto;
+import cn.odboy.system.security.model.JwtUserDto;
 import cn.odboy.util.RedisUtil;
 import cn.odboy.util.RsaUtil;
 import cn.odboy.util.SecurityUtil;
@@ -70,7 +70,7 @@ import java.util.concurrent.TimeUnit;
 public class AuthorizationController {
     private final SecurityProperties properties;
     private final RedisUtil redisUtil;
-    private final OnlineUserService onlineUserService;
+    private final OnlineUserServiceImpl onlineUserService;
     private final TokenProvider tokenProvider;
     private final AuthenticationManagerBuilder authenticationManagerBuilder;
     private final UserDetailsService userDetailsService;
@@ -159,7 +159,7 @@ public class AuthorizationController {
             captchaValue = captchaValue.split("\\.")[0];
         }
         // 保存
-        redisUtil.set(uuid, captchaValue, loginProperties.getLoginCode().getExpiration(), TimeUnit.MINUTES);
+        redisUtil.set(uuid, captchaValue, loginProperties.getLoginCodeProperties().getExpiration(), TimeUnit.MINUTES);
         // 验证码信息
         Map<String, Object> imgResult = new HashMap<String, Object>(2) {{
             put("img", captcha.toBase64());

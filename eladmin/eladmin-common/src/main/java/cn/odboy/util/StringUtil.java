@@ -17,7 +17,7 @@ package cn.odboy.util;
 
 import cn.hutool.http.useragent.UserAgent;
 import cn.hutool.http.useragent.UserAgentUtil;
-import cn.odboy.infra.context.SpringBeanHolder;
+import cn.odboy.context.SpringBeanHolder;
 import lombok.extern.slf4j.Slf4j;
 import net.dreamlu.mica.ip2region.core.Ip2regionSearcher;
 import net.dreamlu.mica.ip2region.core.IpInfo;

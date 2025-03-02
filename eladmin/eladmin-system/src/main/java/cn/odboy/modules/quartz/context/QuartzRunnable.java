@@ -15,7 +15,7 @@
  */
 package cn.odboy.modules.quartz.context;
 
-import cn.odboy.infra.context.SpringBeanHolder;
+import cn.odboy.context.SpringBeanHolder;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.util.ReflectionUtils;

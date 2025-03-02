@@ -15,7 +15,7 @@
  */
 package cn.odboy.util;
 
-import cn.odboy.base.MyEntity;
+import cn.odboy.mybatisplus.model.MyEntity;
 
 import java.util.ArrayList;
 import java.util.Date;

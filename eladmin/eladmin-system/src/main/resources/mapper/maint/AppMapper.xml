@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="cn.odboy.modules.maint.mapper.AppMapper">
-    <resultMap id="BaseResultMap" type="cn.odboy.modules.maint.domain.App">
+    <resultMap id="BaseResultMap" type="cn.odboy.system.maint.domain.App">
         <id column="app_id" property="id"/>
         <result column="name" property="name"/>
         <result column="port" property="port"/>

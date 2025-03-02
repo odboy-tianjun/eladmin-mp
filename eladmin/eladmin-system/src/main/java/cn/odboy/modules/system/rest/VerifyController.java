@@ -17,10 +17,9 @@ package cn.odboy.modules.system.rest;
 
 import cn.odboy.constant.CodeBiEnum;
 import cn.odboy.constant.CodeEnum;
-import cn.odboy.domain.vo.EmailVo;
-import cn.odboy.modules.system.service.VerifyService;
-import cn.odboy.repository.EmailRepository;
-import cn.odboy.service.EmailConfigService;
+import cn.odboy.system.tools.model.EmailVo;
+import cn.odboy.system.core.service.VerifyService;
+import cn.odboy.system.tools.repository.EmailRepository;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.RequiredArgsConstructor;

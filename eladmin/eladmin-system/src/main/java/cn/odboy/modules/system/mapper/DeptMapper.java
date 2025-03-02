@@ -15,8 +15,8 @@
  */
 package cn.odboy.modules.system.mapper;
 
-import cn.odboy.modules.system.domain.Dept;
-import cn.odboy.modules.system.domain.vo.DeptQueryArgs;
+import cn.odboy.system.core.domain.Dept;
+import cn.odboy.system.core.model.DeptQueryArgs;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;

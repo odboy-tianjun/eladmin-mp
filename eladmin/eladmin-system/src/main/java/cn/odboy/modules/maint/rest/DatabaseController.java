@@ -15,13 +15,13 @@
  */
 package cn.odboy.modules.maint.rest;
 
-import cn.odboy.annotation.Log;
-import cn.odboy.infra.exception.BadRequestException;
-import cn.odboy.model.PageResult;
-import cn.odboy.modules.maint.domain.Database;
-import cn.odboy.modules.maint.domain.dto.DatabaseQueryArgs;
-import cn.odboy.modules.maint.service.DatabaseService;
-import cn.odboy.modules.maint.util.SqlUtil;
+import cn.odboy.system.logging.annotation.Log;
+import cn.odboy.exception.BadRequestException;
+import cn.odboy.mybatisplus.model.PageResult;
+import cn.odboy.system.maint.domain.Database;
+import cn.odboy.system.maint.model.DatabaseQueryArgs;
+import cn.odboy.system.maint.service.DatabaseService;
+import cn.odboy.system.maint.util.SqlUtil;
 import cn.odboy.util.FileUtil;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import io.swagger.annotations.Api;

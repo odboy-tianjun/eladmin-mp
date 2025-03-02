@@ -15,8 +15,8 @@
  */
 package cn.odboy.modules.maint.mapper;
 
-import cn.odboy.modules.maint.domain.Deploy;
-import cn.odboy.modules.maint.domain.dto.DeployQueryArgs;
+import cn.odboy.system.maint.domain.Deploy;
+import cn.odboy.system.maint.model.DeployQueryArgs;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;

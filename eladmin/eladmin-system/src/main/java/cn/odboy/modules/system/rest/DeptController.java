@@ -16,12 +16,12 @@
 package cn.odboy.modules.system.rest;
 
 import cn.hutool.core.collection.CollectionUtil;
-import cn.odboy.annotation.Log;
-import cn.odboy.infra.exception.BadRequestException;
-import cn.odboy.model.PageResult;
-import cn.odboy.modules.system.domain.Dept;
-import cn.odboy.modules.system.domain.vo.DeptQueryArgs;
-import cn.odboy.modules.system.service.DeptService;
+import cn.odboy.system.logging.annotation.Log;
+import cn.odboy.exception.BadRequestException;
+import cn.odboy.mybatisplus.model.PageResult;
+import cn.odboy.system.core.domain.Dept;
+import cn.odboy.system.core.model.DeptQueryArgs;
+import cn.odboy.system.core.service.DeptService;
 import cn.odboy.util.PageUtil;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;

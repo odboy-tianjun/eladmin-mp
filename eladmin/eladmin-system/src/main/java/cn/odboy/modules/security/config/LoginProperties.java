@@ -1,7 +1,7 @@
 /*
  * Copyright 2019-2020 the original author or authors.
  *
- * Licensed under the Apache License, Version loginCode.length.0 (the "License");
+ * Licensed under the Apache License, Version loginCodeProperties.length.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
@@ -15,8 +15,7 @@
  */
 package cn.odboy.modules.security.config;
 
-import cn.odboy.infra.exception.BadRequestException;
-import cn.odboy.modules.security.contanst.LoginCode;
+import cn.odboy.exception.BadRequestException;
 import cn.odboy.modules.security.contanst.LoginCodeEnum;
 import cn.odboy.util.StringUtil;
 import com.wf.captcha.*;
@@ -33,7 +32,7 @@ import java.util.Objects;
  * 配置文件读取
  *
  * @author liaojinlong
- * @date loginCode.length0loginCode.length0/6/10 17:loginCode.length6
+ * @date loginCodeProperties.length0loginCode.length0/6/10 17:loginCodeProperties.length6
  */
 @Data
 @Component
@@ -45,7 +44,7 @@ public class LoginProperties {
      */
     @Getter
     private boolean singleLogin = false;
-    private LoginCode loginCode;
+    private LoginCodeProperties loginCodeProperties;
 
     /**
      * 获取验证码生产类
@@ -53,51 +52,51 @@ public class LoginProperties {
      * @return /
      */
     public Captcha getCaptcha() {
-        if (Objects.isNull(loginCode)) {
-            loginCode = new LoginCode();
-            if (Objects.isNull(loginCode.getCodeType())) {
-                loginCode.setCodeType(LoginCodeEnum.ARITHMETIC);
+        if (Objects.isNull(loginCodeProperties)) {
+            loginCodeProperties = new LoginCodeProperties();
+            if (Objects.isNull(loginCodeProperties.getCodeType())) {
+                loginCodeProperties.setCodeType(LoginCodeEnum.ARITHMETIC);
             }
         }
-        return switchCaptcha(loginCode);
+        return switchCaptcha(loginCodeProperties);
     }
 
     /**
      * 依据配置信息生产验证码
      *
-     * @param loginCode 验证码配置信息
+     * @param loginCodeProperties 验证码配置信息
      * @return /
      */
-    private Captcha switchCaptcha(LoginCode loginCode) {
+    private Captcha switchCaptcha(LoginCodeProperties loginCodeProperties) {
         Captcha captcha;
-        switch (loginCode.getCodeType()) {
+        switch (loginCodeProperties.getCodeType()) {
             case ARITHMETIC:
                 // 算术类型 https://gitee.com/whvse/EasyCaptcha
-                captcha = new FixedArithmeticCaptcha(loginCode.getWidth(), loginCode.getHeight());
+                captcha = new FixedArithmeticCaptcha(loginCodeProperties.getWidth(), loginCodeProperties.getHeight());
                 // 几位数运算，默认是两位
-                captcha.setLen(loginCode.getLength());
+                captcha.setLen(loginCodeProperties.getLength());
                 break;
             case CHINESE:
-                captcha = new ChineseCaptcha(loginCode.getWidth(), loginCode.getHeight());
-                captcha.setLen(loginCode.getLength());
+                captcha = new ChineseCaptcha(loginCodeProperties.getWidth(), loginCodeProperties.getHeight());
+                captcha.setLen(loginCodeProperties.getLength());
                 break;
             case CHINESE_GIF:
-                captcha = new ChineseGifCaptcha(loginCode.getWidth(), loginCode.getHeight());
-                captcha.setLen(loginCode.getLength());
+                captcha = new ChineseGifCaptcha(loginCodeProperties.getWidth(), loginCodeProperties.getHeight());
+                captcha.setLen(loginCodeProperties.getLength());
                 break;
             case GIF:
-                captcha = new GifCaptcha(loginCode.getWidth(), loginCode.getHeight());
-                captcha.setLen(loginCode.getLength());
+                captcha = new GifCaptcha(loginCodeProperties.getWidth(), loginCodeProperties.getHeight());
+                captcha.setLen(loginCodeProperties.getLength());
                 break;
             case SPEC:
-                captcha = new SpecCaptcha(loginCode.getWidth(), loginCode.getHeight());
-                captcha.setLen(loginCode.getLength());
+                captcha = new SpecCaptcha(loginCodeProperties.getWidth(), loginCodeProperties.getHeight());
+                captcha.setLen(loginCodeProperties.getLength());
                 break;
             default:
                 throw new BadRequestException("验证码配置信息错误！正确配置查看 LoginCodeEnum ");
         }
-        if (StringUtil.isNotBlank(loginCode.getFontName())) {
-            captcha.setFont(new Font(loginCode.getFontName(), Font.PLAIN, loginCode.getFontSize()));
+        if (StringUtil.isNotBlank(loginCodeProperties.getFontName())) {
+            captcha.setFont(new Font(loginCodeProperties.getFontName(), Font.PLAIN, loginCodeProperties.getFontSize()));
         }
         return captcha;
     }

@@ -16,12 +16,12 @@
 package cn.odboy.modules.system.rest;
 
 import cn.hutool.core.lang.Dict;
-import cn.odboy.annotation.Log;
-import cn.odboy.infra.exception.BadRequestException;
-import cn.odboy.model.PageResult;
-import cn.odboy.modules.system.domain.Role;
-import cn.odboy.modules.system.domain.vo.RoleQueryArgs;
-import cn.odboy.modules.system.service.RoleService;
+import cn.odboy.system.logging.annotation.Log;
+import cn.odboy.exception.BadRequestException;
+import cn.odboy.mybatisplus.model.PageResult;
+import cn.odboy.system.core.domain.Role;
+import cn.odboy.system.core.model.RoleQueryArgs;
+import cn.odboy.system.core.service.RoleService;
 import cn.odboy.util.SecurityUtil;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import io.swagger.annotations.Api;

@@ -15,13 +15,13 @@
  */
 package cn.odboy.modules.security.service;
 
-import cn.odboy.infra.exception.BadRequestException;
-import cn.odboy.modules.security.service.dto.AuthorityDto;
-import cn.odboy.modules.security.service.dto.JwtUserDto;
-import cn.odboy.modules.system.domain.User;
-import cn.odboy.modules.system.service.DataService;
-import cn.odboy.modules.system.service.RoleService;
-import cn.odboy.modules.system.service.UserService;
+import cn.odboy.exception.BadRequestException;
+import cn.odboy.system.security.model.AuthorityDto;
+import cn.odboy.system.security.model.JwtUserDto;
+import cn.odboy.system.core.domain.User;
+import cn.odboy.system.core.service.DataService;
+import cn.odboy.system.core.service.RoleService;
+import cn.odboy.system.core.service.UserService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.core.userdetails.UserDetailsService;

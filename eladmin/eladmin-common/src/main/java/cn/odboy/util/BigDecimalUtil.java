@@ -16,7 +16,7 @@
 package cn.odboy.util;
 
 import cn.hutool.core.convert.Convert;
-import cn.odboy.infra.exception.BadRequestException;
+import cn.odboy.exception.BadRequestException;
 
 import javax.validation.constraints.NotNull;
 import java.math.BigDecimal;

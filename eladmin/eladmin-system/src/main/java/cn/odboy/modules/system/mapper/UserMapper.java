@@ -15,7 +15,7 @@
  */
 package cn.odboy.modules.system.mapper;
 
-import cn.odboy.modules.system.domain.User;
+import cn.odboy.system.core.domain.User;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;

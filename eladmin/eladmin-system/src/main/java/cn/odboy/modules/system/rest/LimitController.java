@@ -15,8 +15,8 @@
  */
 package cn.odboy.modules.system.rest;
 
-import cn.odboy.infra.limit.Limit;
-import cn.odboy.infra.security.annotation.AnonymousGetMapping;
+import cn.odboy.limit.Limit;
+import cn.odboy.security.annotation.AnonymousGetMapping;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.RequestMapping;

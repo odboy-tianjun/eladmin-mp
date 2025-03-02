@@ -15,12 +15,12 @@
  */
 package cn.odboy.modules.system.rest;
 
-import cn.odboy.annotation.Log;
-import cn.odboy.infra.exception.BadRequestException;
-import cn.odboy.model.PageResult;
-import cn.odboy.modules.system.domain.DictDetail;
-import cn.odboy.modules.system.domain.vo.DictDetailQueryArgs;
-import cn.odboy.modules.system.service.DictDetailService;
+import cn.odboy.system.logging.annotation.Log;
+import cn.odboy.exception.BadRequestException;
+import cn.odboy.mybatisplus.model.PageResult;
+import cn.odboy.system.core.domain.DictDetail;
+import cn.odboy.system.core.model.DictDetailQueryArgs;
+import cn.odboy.system.core.service.DictDetailService;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;

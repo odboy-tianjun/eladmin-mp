@@ -16,13 +16,13 @@
 package cn.odboy.modules.system.rest;
 
 import cn.hutool.core.collection.CollectionUtil;
-import cn.odboy.annotation.Log;
-import cn.odboy.infra.exception.BadRequestException;
-import cn.odboy.model.PageResult;
-import cn.odboy.modules.system.domain.Menu;
-import cn.odboy.modules.system.domain.vo.MenuQueryArgs;
-import cn.odboy.modules.system.domain.vo.MenuVo;
-import cn.odboy.modules.system.service.MenuService;
+import cn.odboy.system.logging.annotation.Log;
+import cn.odboy.exception.BadRequestException;
+import cn.odboy.mybatisplus.model.PageResult;
+import cn.odboy.system.core.domain.Menu;
+import cn.odboy.system.core.model.MenuQueryArgs;
+import cn.odboy.system.core.model.MenuVo;
+import cn.odboy.system.core.service.MenuService;
 import cn.odboy.util.PageUtil;
 import cn.odboy.util.SecurityUtil;
 import io.swagger.annotations.Api;

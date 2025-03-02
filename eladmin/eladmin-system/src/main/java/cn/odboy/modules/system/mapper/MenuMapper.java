@@ -15,8 +15,8 @@
  */
 package cn.odboy.modules.system.mapper;
 
-import cn.odboy.modules.system.domain.Menu;
-import cn.odboy.modules.system.domain.vo.MenuQueryArgs;
+import cn.odboy.system.core.domain.Menu;
+import cn.odboy.system.core.model.MenuQueryArgs;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;

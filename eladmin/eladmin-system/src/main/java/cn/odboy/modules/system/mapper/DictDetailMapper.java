@@ -15,8 +15,8 @@
  */
 package cn.odboy.modules.system.mapper;
 
-import cn.odboy.modules.system.domain.DictDetail;
-import cn.odboy.modules.system.domain.vo.DictDetailQueryArgs;
+import cn.odboy.system.core.domain.DictDetail;
+import cn.odboy.system.core.model.DictDetailQueryArgs;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;

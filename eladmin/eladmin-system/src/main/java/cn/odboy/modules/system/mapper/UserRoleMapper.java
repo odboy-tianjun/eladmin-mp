@@ -15,7 +15,7 @@
  */
 package cn.odboy.modules.system.mapper;
 
-import cn.odboy.modules.system.domain.Role;
+import cn.odboy.system.core.domain.Role;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 

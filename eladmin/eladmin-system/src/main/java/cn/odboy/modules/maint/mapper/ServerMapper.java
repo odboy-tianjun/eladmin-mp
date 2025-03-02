@@ -15,8 +15,8 @@
  */
 package cn.odboy.modules.maint.mapper;
 
-import cn.odboy.modules.maint.domain.Server;
-import cn.odboy.modules.maint.domain.dto.ServerQueryArgs;
+import cn.odboy.system.maint.domain.Server;
+import cn.odboy.system.maint.model.ServerQueryArgs;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;

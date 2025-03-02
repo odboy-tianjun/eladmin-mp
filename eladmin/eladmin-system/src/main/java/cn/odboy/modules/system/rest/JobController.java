@@ -15,12 +15,12 @@
  */
 package cn.odboy.modules.system.rest;
 
-import cn.odboy.annotation.Log;
-import cn.odboy.infra.exception.BadRequestException;
-import cn.odboy.model.PageResult;
-import cn.odboy.modules.system.domain.Job;
-import cn.odboy.modules.system.domain.vo.JobQueryArgs;
-import cn.odboy.modules.system.service.JobService;
+import cn.odboy.system.logging.annotation.Log;
+import cn.odboy.exception.BadRequestException;
+import cn.odboy.mybatisplus.model.PageResult;
+import cn.odboy.system.core.domain.Job;
+import cn.odboy.system.core.model.JobQueryArgs;
+import cn.odboy.system.core.service.JobService;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;

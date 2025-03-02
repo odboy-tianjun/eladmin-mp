@@ -15,14 +15,14 @@
  */
 package cn.odboy.modules.quartz.rest;
 
-import cn.odboy.annotation.Log;
-import cn.odboy.infra.context.SpringBeanHolder;
-import cn.odboy.infra.exception.BadRequestException;
-import cn.odboy.model.PageResult;
-import cn.odboy.modules.quartz.domain.QuartzJob;
-import cn.odboy.modules.quartz.domain.QuartzLog;
-import cn.odboy.modules.quartz.domain.vo.QuartzJobQueryArgs;
-import cn.odboy.modules.quartz.service.QuartzJobService;
+import cn.odboy.system.logging.annotation.Log;
+import cn.odboy.context.SpringBeanHolder;
+import cn.odboy.exception.BadRequestException;
+import cn.odboy.mybatisplus.model.PageResult;
+import cn.odboy.system.quartz.domain.QuartzJob;
+import cn.odboy.system.quartz.domain.QuartzLog;
+import cn.odboy.system.quartz.model.QuartzJobQueryArgs;
+import cn.odboy.system.quartz.service.QuartzJobService;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;

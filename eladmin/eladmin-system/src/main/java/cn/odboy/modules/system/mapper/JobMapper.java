@@ -15,8 +15,8 @@
  */
 package cn.odboy.modules.system.mapper;
 
-import cn.odboy.modules.system.domain.Job;
-import cn.odboy.modules.system.domain.vo.JobQueryArgs;
+import cn.odboy.system.core.domain.Job;
+import cn.odboy.system.core.model.JobQueryArgs;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;

@@ -15,12 +15,12 @@
  */
 package cn.odboy.modules.maint.rest;
 
-import cn.odboy.annotation.Log;
-import cn.odboy.model.PageResult;
-import cn.odboy.modules.maint.domain.Deploy;
-import cn.odboy.modules.maint.domain.DeployHistory;
-import cn.odboy.modules.maint.domain.dto.DeployQueryArgs;
-import cn.odboy.modules.maint.service.DeployService;
+import cn.odboy.system.logging.annotation.Log;
+import cn.odboy.mybatisplus.model.PageResult;
+import cn.odboy.system.maint.domain.Deploy;
+import cn.odboy.system.maint.domain.DeployHistory;
+import cn.odboy.system.maint.model.DeployQueryArgs;
+import cn.odboy.system.maint.service.DeployService;
 import cn.odboy.util.FileUtil;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import io.swagger.annotations.Api;

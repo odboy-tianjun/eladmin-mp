@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="cn.odboy.modules.system.mapper.DeptMapper">
-    <resultMap id="BaseResultMap" type="cn.odboy.modules.system.domain.Dept">
+    <resultMap id="BaseResultMap" type="cn.odboy.system.core.domain.Dept">
         <id column="dept_id" property="id"/>
         <result column="dept_sort" property="deptSort"/>
         <result column="name" property="name"/>
@@ -58,7 +58,7 @@
         from sys_dept
         where pid is null
     </select>
-    <select id="selectDeptsByRoleId" resultType="cn.odboy.modules.system.domain.Dept">
+    <select id="selectDeptsByRoleId" resultType="cn.odboy.system.core.domain.Dept">
         select d.dept_id as id,
                d.name,
                d.pid,

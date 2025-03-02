@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="cn.odboy.modules.system.mapper.UserMapper">
-    <resultMap id="BaseResultMap" type="cn.odboy.modules.system.domain.User">
+    <resultMap id="BaseResultMap" type="cn.odboy.system.core.domain.User">
         <id column="user_user_id" property="id"/>
         <result column="user_dept_id" property="deptId"/>
         <result column="user_username" property="username"/>
@@ -19,15 +19,15 @@
         <result column="user_update_by" property="updateBy"/>
         <result column="user_create_time" property="createTime"/>
         <result column="user_update_time" property="updateTime"/>
-        <association property="dept" javaType="cn.odboy.modules.system.domain.Dept">
+        <association property="dept" javaType="cn.odboy.system.core.domain.Dept">
             <id column="dept_id" property="id"/>
             <result column="dept_name" property="name"/>
         </association>
-        <collection property="jobs" ofType="cn.odboy.modules.system.domain.Job">
+        <collection property="jobs" ofType="cn.odboy.system.core.domain.Job">
             <id column="job_id" property="id"/>
             <result column="job_name" property="name"/>
         </collection>
-        <collection property="roles" ofType="cn.odboy.modules.system.domain.Role">
+        <collection property="roles" ofType="cn.odboy.system.core.domain.Role">
             <id column="role_id" property="id"/>
             <result column="role_name" property="name"/>
             <result column="role_level" property="level"/>
@@ -117,12 +117,12 @@
         left join sys_dept d on u.dept_id = d.dept_id
         where u.username = #{username}
     </select>
-    <select id="getByEmail" resultType="cn.odboy.modules.system.domain.User">
+    <select id="getByEmail" resultType="cn.odboy.system.core.domain.User">
         select user_id as id, username
         from sys_user
         where email = #{email}
     </select>
-    <select id="getByPhone" resultType="cn.odboy.modules.system.domain.User">
+    <select id="getByPhone" resultType="cn.odboy.system.core.domain.User">
         select user_id as id, username
         from sys_user
         where phone = #{phone}
@@ -138,7 +138,7 @@
         set email = #{email}
         where username = #{username}
     </update>
-    <select id="selectUsersByRoleId" resultType="cn.odboy.modules.system.domain.User">
+    <select id="selectUsersByRoleId" resultType="cn.odboy.system.core.domain.User">
         SELECT u.user_id as id, u.username
         FROM sys_user u,
              sys_users_roles r
@@ -146,7 +146,7 @@
           AND r.role_id = #{roleId}
         group by u.user_id
     </select>
-    <select id="selectUsersByRoleDeptId" resultType="cn.odboy.modules.system.domain.User">
+    <select id="selectUsersByRoleDeptId" resultType="cn.odboy.system.core.domain.User">
         SELECT u.*
         FROM sys_user u,
              sys_users_roles r,
@@ -156,7 +156,7 @@
           AND d.dept_id = #{deptId}
         group by u.user_id
     </select>
-    <select id="selectUsersByMenuId" resultType="cn.odboy.modules.system.domain.User">
+    <select id="selectUsersByMenuId" resultType="cn.odboy.system.core.domain.User">
         SELECT u.user_id as id, u.username
         FROM sys_user u,
              sys_users_roles ur,

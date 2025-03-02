@@ -15,7 +15,7 @@
  */
 package cn.odboy.modules.maint.mapper;
 
-import cn.odboy.modules.maint.domain.Server;
+import cn.odboy.system.maint.domain.Server;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 

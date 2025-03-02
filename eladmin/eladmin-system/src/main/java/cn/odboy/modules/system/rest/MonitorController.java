@@ -15,7 +15,7 @@
  */
 package cn.odboy.modules.system.rest;
 
-import cn.odboy.modules.system.service.MonitorService;
+import cn.odboy.system.core.service.MonitorService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.RequiredArgsConstructor;

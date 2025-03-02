@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="cn.odboy.modules.system.mapper.DictMapper">
-    <resultMap id="BaseResultMap" type="cn.odboy.modules.system.domain.Dict">
+    <resultMap id="BaseResultMap" type="cn.odboy.system.core.domain.Dict">
         <id column="dict_id" property="id" jdbcType="BIGINT"/>
         <result column="name" property="name" jdbcType="VARCHAR"/>
         <result column="description" property="description" jdbcType="VARCHAR"/>
@@ -9,7 +9,7 @@
         <result column="update_by" property="updateBy" jdbcType="VARCHAR"/>
         <result column="create_time" property="createTime" jdbcType="TIMESTAMP"/>
         <result column="update_time" property="updateTime" jdbcType="TIMESTAMP"/>
-        <collection property="dictDetails" ofType="cn.odboy.modules.system.domain.DictDetail">
+        <collection property="dictDetails" ofType="cn.odboy.system.core.domain.DictDetail">
             <id column="dd_id" property="id" jdbcType="BIGINT"/>
             <result column="label" property="label" jdbcType="VARCHAR"/>
             <result column="value" property="value" jdbcType="VARCHAR"/>

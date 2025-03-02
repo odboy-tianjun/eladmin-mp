@@ -15,9 +15,9 @@
  */
 package cn.odboy.modules.security.rest;
 
-import cn.odboy.model.PageResult;
-import cn.odboy.modules.security.service.OnlineUserService;
-import cn.odboy.modules.security.service.dto.OnlineUserDto;
+import cn.odboy.mybatisplus.model.PageResult;
+import cn.odboy.modules.security.service.OnlineUserServiceImpl;
+import cn.odboy.system.security.model.OnlineUserDto;
 import cn.odboy.util.EncryptUtil;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -40,7 +40,7 @@ import java.util.Set;
 @RequestMapping("/auth/online")
 @Api(tags = "系统：在线用户管理")
 public class OnlineController {
-    private final OnlineUserService onlineUserService;
+    private final OnlineUserServiceImpl onlineUserService;
 
     @ApiOperation("查询在线用户")
     @GetMapping

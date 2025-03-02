@@ -15,8 +15,8 @@
  */
 package cn.odboy.modules.quartz.context;
 
-import cn.odboy.infra.exception.BadRequestException;
-import cn.odboy.modules.quartz.domain.QuartzJob;
+import cn.odboy.exception.BadRequestException;
+import cn.odboy.system.quartz.domain.QuartzJob;
 import lombok.extern.slf4j.Slf4j;
 import org.quartz.*;
 import org.quartz.impl.triggers.CronTriggerImpl;

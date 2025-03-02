@@ -16,7 +16,7 @@
 package cn.odboy.modules.security.service;
 
 import cn.hutool.core.util.RandomUtil;
-import cn.odboy.modules.security.service.dto.JwtUserDto;
+import cn.odboy.system.security.model.JwtUserDto;
 import cn.odboy.util.RedisUtil;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Value;

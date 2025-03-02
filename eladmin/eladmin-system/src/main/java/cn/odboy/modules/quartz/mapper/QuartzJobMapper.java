@@ -15,8 +15,8 @@
  */
 package cn.odboy.modules.quartz.mapper;
 
-import cn.odboy.modules.quartz.domain.QuartzJob;
-import cn.odboy.modules.quartz.domain.vo.QuartzJobQueryArgs;
+import cn.odboy.system.quartz.domain.QuartzJob;
+import cn.odboy.system.quartz.model.QuartzJobQueryArgs;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;

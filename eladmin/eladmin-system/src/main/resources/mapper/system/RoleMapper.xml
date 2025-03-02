@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="cn.odboy.modules.system.mapper.RoleMapper">
-    <resultMap id="BaseResultMap" type="cn.odboy.modules.system.domain.Role">
+    <resultMap id="BaseResultMap" type="cn.odboy.system.core.domain.Role">
         <id column="role_role_id" property="id"/>
         <result column="role_name" property="name"/>
         <result column="role_data_scope" property="dataScope"/>
@@ -11,12 +11,12 @@
         <result column="role_update_by" property="updateBy"/>
         <result column="role_create_time" property="createTime"/>
         <result column="role_update_time" property="updateTime"/>
-        <collection property="menus" ofType="cn.odboy.modules.system.domain.Menu">
+        <collection property="menus" ofType="cn.odboy.system.core.domain.Menu">
             <id column="menu_id" property="id"/>
             <result column="menu_title" property="title"/>
             <result column="menu_permission" property="permission"/>
         </collection>
-        <collection property="depts" ofType="cn.odboy.modules.system.domain.Dept">
+        <collection property="depts" ofType="cn.odboy.system.core.domain.Dept">
             <id column="dept_id" property="id"/>
             <result column="dept_name" property="name"/>
         </collection>
@@ -54,7 +54,7 @@
             </if>
         </where>
     </sql>
-    <select id="selectMetaRoles" resultType="cn.odboy.modules.system.domain.Role">
+    <select id="selectMetaRoles" resultType="cn.odboy.system.core.domain.Role">
         select role_id as id, name, level
         from sys_role
         order by level
@@ -71,7 +71,7 @@
         left join sys_dept dept on dept.dept_id = srd.dept_id
         where role.role_id = #{roleId}
     </select>
-    <select id="getByName" resultType="cn.odboy.modules.system.domain.Role">
+    <select id="getByName" resultType="cn.odboy.system.core.domain.Role">
         select role_id as id
         from sys_role
         where name = #{name}
@@ -122,7 +122,7 @@
             #{deptId}
         </foreach>
     </select>
-    <select id="selectRolesByMenuId" resultType="cn.odboy.modules.system.domain.Role">
+    <select id="selectRolesByMenuId" resultType="cn.odboy.system.core.domain.Role">
         SELECT role.role_id as id
         FROM sys_role role,
              sys_roles_menus rm

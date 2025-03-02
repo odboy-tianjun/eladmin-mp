@@ -16,8 +16,8 @@
 package cn.odboy.util;
 
 import cn.odboy.constant.DataScopeEnum;
-import cn.odboy.infra.context.SpringBeanHolder;
-import cn.odboy.infra.exception.BadRequestException;
+import cn.odboy.context.SpringBeanHolder;
+import cn.odboy.exception.BadRequestException;
 import com.alibaba.fastjson2.JSON;
 import com.alibaba.fastjson2.JSONArray;
 import com.alibaba.fastjson2.JSONObject;
